@@ -1,16 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const categoriesList = document.getElementById("categories");
+const categoryList = document.querySelectorAll("#categories > .item");
+console.log(`Number of categories: ${categoryList.length}\n`);
 
-  const categoryItems = categoriesList.querySelectorAll(".item");
+categoryList.forEach((category) => {
+  const categoryName = category.querySelector("h2").textContent;
+  const categoryElements = category.querySelectorAll("ul > li").length;
 
-  console.log(`Number of categories: ${categoryItems.length}\n`);
-
-  categoryItems.forEach((categoryItem) => {
-    const categoryName = categoryItem.querySelector("h2").textContent;
-
-    const categoryElements = categoryItem.querySelectorAll("ul li").length;
-
-    console.log(`Category: ${categoryName}`);
-    console.log(`Elements: ${categoryElements}\n`);
-  });
+  console.log(`Category: ${categoryName}`);
+  console.log(`Elements: ${categoryElements}\n`);
 });

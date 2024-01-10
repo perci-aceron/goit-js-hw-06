@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const ingredientsList = document.getElementById("ingredients");
 
   const ingredientsArray = [
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const listItem = document.createElement("li");
 
     listItem.textContent = ingredient;
-
     listItem.classList.add("item");
 
     ingredientsList.appendChild(listItem);
